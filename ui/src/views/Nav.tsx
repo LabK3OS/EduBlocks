@@ -36,23 +36,23 @@ export default class Nav extends Component<Props, {}> {
           <img class='logo' src='/images/edublock-logo_Final_edublocks_white.svg' />
           
         </a>
-            <input class="brand" type="email" placeholder="Untitled" style="width: 200px !important; color:black; margin-left: 5px" onChange={(e) => this.props.onFileChange((e.target as any).value)}></input>
+            <input class="brand" type="email" placeholder="Nuevo_Proyecto" style="width: 200px !important; color:black; margin-left: 5px" onChange={(e) => this.props.onFileChange((e.target as any).value)}></input>
             <input id='bmenub' type='checkbox' class='show' />
             <label for='bmenub' class='burger pseudo button icon-menu'></label>
 
             
             <div class='menu'>
               
-              <a class='button icon-plus' title="Create new file" href='javascript:void(0)' onClick={() => this.props.newCode()}>
-                New
+              <a class='button icon-plus' title="Crear un nuevo proyecto" href='javascript:void(0)' onClick={() => this.props.newCode()}>
+                Nuevo
           </a>
 
-              <a class='button icon-folder-open' title="Open a file" href='javascript:void(0)' onClick={() => this.props.openCode()}>
-                Open
+              <a class='button icon-folder-open' title="Abrir un proyecto" href='javascript:void(0)' onClick={() => this.props.openCode()}>
+                Abrir
           </a>
 
-              <a class='button icon-floppy' title='Save a file' href='javascript:void(0)' onClick={() => this.props.saveCode()}>
-                Save
+              <a class='button icon-floppy' title='Guardar el proyecto' href='javascript:void(0)' onClick={() => this.props.saveCode()}>
+                Guardar
           </a>
 
               {downloadHex &&
@@ -63,7 +63,7 @@ export default class Nav extends Component<Props, {}> {
 
               {downloadPython &&
                 <a class='button icon-download' title='Download Python Source Code' href='javascript:void(0)' onClick={() => downloadPython()}>
-                  Download
+                  Descargar
           </a>
               }
 
@@ -78,17 +78,17 @@ export default class Nav extends Component<Props, {}> {
             </a>
               }
 
-              <a class='button icon-book' title='Samples' href='javascript:void(0)' onClick={() => this.props.openSamples()}>
-                Samples
+              <a class='button icon-book' title='Ejemplos' href='javascript:void(0)' onClick={() => this.props.openSamples()}>
+                Ejemplos
           </a>
 
-              <a class='button icon-cog' title="Settings" href='javascript:void(0)' onClick={() => this.props.onFunction()}>
-                Settings
+              <a class='button icon-cog' title="Configuración" href='javascript:void(0)' onClick={() => this.props.onFunction()}>
+                Configuración
           </a>
 
               {sendCode &&
-                <a class='button icon-play button-green' title='Run your code' href='javascript:void(0)' onClick={() => sendCode()}>
-                  Run
+                <a class='button icon-play button-green' title='Ejecutar el programa' href='javascript:void(0)' onClick={() => sendCode()}>
+                  Ejecutar
             </a>
               }
 

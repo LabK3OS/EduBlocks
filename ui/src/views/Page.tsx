@@ -51,7 +51,7 @@ export default class Page extends Component<Props, State> {
       modal: 'platform',
       extensionsActive: [],
       progress: 0,
-      fileName: "Untitled",
+      fileName: "Nuevo_Proyecto",
 
       doc: {
         xml: null,
@@ -394,7 +394,7 @@ export default class Page extends Component<Props, State> {
     return (
       <div id='page'>
         <ImageModal
-          title='Select your mode'
+          title='Seleccciona el modo'
           options={availablePlatforms}
           visible={this.state.modal === 'platform'}
           onSelect={(platform) => this.selectPlatform(platform.platform) && this.new()}
@@ -415,7 +415,7 @@ export default class Page extends Component<Props, State> {
           text='Cambiar de modo eliminara tu código, deseas continuar?'
           onCancel={() => { }}
           onButtonClick={(key) => key === 'close' && this.closeModal()}
-          onYes={(key1) => key1 === 'yes' && this.openPlatforms()}
+          onYes={(key1) => key1 === 'Si' && this.openPlatforms()}
         />
 
         <AlertModal

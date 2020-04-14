@@ -225,21 +225,10 @@ export async function getToolBoxXml(extensions: Extension[]) {
     (await import('./pi/sonicpi/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'sonicpi', 'toolbox.xml'));
 
-    (await import('./pi/pimoroni/definitions')).default(Blockly.Blocks);
-    (await import('./pi/pimoroni/generators')).default(Blockly.Python as any);
-    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'pimoroni', 'toolbox.xml'));
-
-    (await import('./pi/requests/definitions')).default(Blockly.Blocks);
-    (await import('./pi/requests/generators')).default(Blockly.Python as any);
-    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'requests', 'toolbox.xml'));
-
-    (await import('./pi/sensehat/definitions')).default(Blockly.Blocks);
-    (await import('./pi/sensehat/generators')).default(Blockly.Python as any);
-    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'sensehat', 'toolbox.xml'));
-
-    (await import('./pi/bitio/definitions')).default(Blockly.Blocks);
-    (await import('./pi/bitio/generators')).default(Blockly.Python as any);
-    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'bitio', 'toolbox.xml'));
+    
+    (await import('./pi/threads/definitions')).default(Blockly.Blocks);
+    (await import('./pi/threads/generators')).default(Blockly.Python as any);
+    toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'threads', 'toolbox.xml'));
 
     (await import('./pi/turtle/definitions')).default(Blockly.Blocks);
     (await import('./pi/turtle/generators')).default(Blockly.Python as any);
