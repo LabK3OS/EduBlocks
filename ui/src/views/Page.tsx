@@ -12,8 +12,8 @@ import RemoteShellView from './RemoteShellView';
 import SelectModal, { SelectModalOption } from './SelectModal';
 import TrinketView from './TrinketView';
 
-type AdvancedFunction = 'Export Python' | 'Themes' | 'Flash Hex';
-const AdvancedFunctions: AdvancedFunction[] = ['Export Python', 'Themes'];
+type AdvancedFunction = 'Exportar Python' | 'Temas' | 'Flash Hex';
+const AdvancedFunctions: AdvancedFunction[] = ['Exportar Python', 'Temas'];
 
 const ViewModeBlockly = 'blocks';
 const ViewModePython = 'python';
@@ -359,12 +359,12 @@ export default class Page extends Component<Props, State> {
   }
 
   private async runAdvancedFunction(func: AdvancedFunction) {
-    if (func === 'Export Python') {
+    if (func === 'Exportar Python') {
       await this.downloadPython();
       await this.closeModal();
     }
 
-    if (func === 'Themes') {
+    if (func === 'Temas') {
       await this.openThemes();
     }
 
@@ -410,9 +410,9 @@ export default class Page extends Component<Props, State> {
         />
 
         <OverModal
-          title='Attention!'
+          title='Cuidado!'
           visible={this.state.modal === 'codeOverwrite'}
-          text='Changing mode will make you lose your code, do you wish to continue?'
+          text='Cambiar de modo eliminara tu código, deseas continuar?'
           onCancel={() => { }}
           onButtonClick={(key) => key === 'close' && this.closeModal()}
           onYes={(key1) => key1 === 'yes' && this.openPlatforms()}
@@ -501,9 +501,9 @@ export default class Page extends Component<Props, State> {
         }
 
         <SelectModal
-          title='Samples'
+          title='Ejemplos'
           options={this.state.platform ? this.props.app.getSamples(this.state.platform.key).map((label) => ({ label })) : []}
-          selectLabel='Open'
+          selectLabel='Abrir'
           buttons={[]}
           visible={this.state.modal === 'samples'}
           onSelect={(file) => this.selectSample(file.label)}
@@ -511,9 +511,9 @@ export default class Page extends Component<Props, State> {
         />
 
         <SelectModal
-          title='Themes'
+          title='Temas'
           options={this.props.app.getThemes().map((label) => ({ label }))}
-          selectLabel='Select'
+          selectLabel='Aplicar'
           buttons={[]}
           visible={this.state.modal === 'themes'}
           onSelect={(theme) => this.selectTheme(theme.label)}
@@ -521,8 +521,8 @@ export default class Page extends Component<Props, State> {
         />
 
         <SelectModal
-          title='Advanced Functions'
-          selectLabel='Go'
+          title='Funciones avanzadas'
+          selectLabel='Ir'
           buttons={[]}
           visible={this.state.modal === 'functions'}
           options={this.getAdvancedFunctionList()}

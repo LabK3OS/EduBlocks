@@ -8,7 +8,8 @@
             "daplink",
             "hexlify",
             "microbit"
-        ]
+        ],
+        "cSpell.language": ",es"
     },
     "folders": [
         {

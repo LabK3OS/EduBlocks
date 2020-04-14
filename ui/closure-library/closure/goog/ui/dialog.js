@@ -1445,14 +1445,14 @@ goog.ui.Dialog.MSG_DIALOG_OK_ = goog.getMsg('OK');
  * @desc Standard caption for the dialog 'Cancel' button.
  * @private
  */
-goog.ui.Dialog.MSG_DIALOG_CANCEL_ = goog.getMsg('Cancel');
+goog.ui.Dialog.MSG_DIALOG_CANCEL_ = goog.getMsg('Cancelar');
 
 
 /**
  * @desc Standard caption for the dialog 'Yes' button.
  * @private
  */
-goog.ui.Dialog.MSG_DIALOG_YES_ = goog.getMsg('Yes');
+goog.ui.Dialog.MSG_DIALOG_YES_ = goog.getMsg('Si');
 
 
 /**
@@ -1466,21 +1466,21 @@ goog.ui.Dialog.MSG_DIALOG_NO_ = goog.getMsg('No');
  * @desc Standard caption for the dialog 'Save' button.
  * @private
  */
-goog.ui.Dialog.MSG_DIALOG_SAVE_ = goog.getMsg('Save');
+goog.ui.Dialog.MSG_DIALOG_SAVE_ = goog.getMsg('Guardar');
 
 
 /**
  * @desc Standard caption for the dialog 'Continue' button.
  * @private
  */
-goog.ui.Dialog.MSG_DIALOG_CONTINUE_ = goog.getMsg('Continue');
+goog.ui.Dialog.MSG_DIALOG_CONTINUE_ = goog.getMsg('Continuar');
 
 
 /**
  * @desc Standard label for the dialog 'X' (close) button.
  * @private
  */
-goog.ui.Dialog.MSG_GOOG_UI_DIALOG_CLOSE_ = goog.getMsg('Close');
+goog.ui.Dialog.MSG_GOOG_UI_DIALOG_CLOSE_ = goog.getMsg('Cerrar');
 
 
 /**

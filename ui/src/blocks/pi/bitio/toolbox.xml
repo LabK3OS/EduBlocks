@@ -1,4 +1,4 @@
-<category name="BitIO" colour="#C227E2" iconclass="blocklyTreeIconCustom bitio">
+<category name="Threads" colour="#C227E2" iconclass="blocklyTreeIconCustom bitio">
   <block type="displayscrolltext">
     <value name="text">
       <shadow type="textinline">

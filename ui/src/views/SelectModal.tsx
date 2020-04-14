@@ -31,7 +31,7 @@ export default class SelectModal<T extends SelectModalOption> extends Component<
   private getButtons(): SelectModalButton[] {
     return [
       ...this.props.buttons,
-      { key: 'close', label: 'Close', position: 'right' },
+      { key: 'close', label: 'Cerrar', position: 'right' },
     ];
   }
 
