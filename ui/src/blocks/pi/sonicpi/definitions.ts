@@ -2,12 +2,11 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['import_sonic'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('from psonic import *');
+        .appendField('import SonicPi');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#ff0066");
-      this.setTooltip('');
-      this.setHelpUrl('');
+      this.setTooltip('Importar librería de SonicPi');
     },
   };
 

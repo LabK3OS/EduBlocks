@@ -2,11 +2,11 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['import_turtle'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField("from turtle import *");
+        .appendField("import turtle");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#ff0066");
-      this.setTooltip("Import Turtle library");
+      this.setTooltip("Importar librería Turtle para gráficos");
       this.setHelpUrl("");
     }
   };

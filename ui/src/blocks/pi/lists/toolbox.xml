@@ -1,6 +1,6 @@
 <category name="Listas" colour="#15BAD4" iconclass="blocklyTreeIconCustom lists">
 
-  <label text="Lists" web-class="myLabelStyle"></label>
+  <label text="Bloques de creación y uso de listas" web-class="myLabelStyle"></label>
   <block type="create_list">
     <value name="text">
       <shadow type="textinline">
@@ -9,7 +9,7 @@
     </value>
   </block>
 
-  <block type="calllist"></block>
+
 
   <block type="selectlist">
     <value name="NAME">

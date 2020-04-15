@@ -13,8 +13,8 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#644A9E");
-      this.setTooltip('');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('Este bloque se ejecuta de forma repetitiva en caso de que su condición sea cierta, en otro caso se termina bucle y se ejecuta el siguiente bloque');
+
     },
   };
 
@@ -35,8 +35,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#644A9E");
-      this.setTooltip('');
-      this.setHelpUrl('Create a for loop');
+      this.setTooltip('Este bloque ejecuta el código a su interior, un numero de veces determinado por el rango seleccionado, se debe asignar una variable al bucle, que aumenta de uno en en uno por cada iteración del bucle');
     },
   };
 
@@ -57,8 +56,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#644A9E");
-      this.setTooltip('');
-      this.setHelpUrl('');
+      this.setTooltip('Este bloque ejecuta el código en su interior, por cada elemento presente en una lista, se debe asignar un elemento que tome el valor de de uno en uno, de todos los elemento de la lista');
     },
   };
 
@@ -69,8 +67,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#644A9E");
-      this.setTooltip("");
-      this.setHelpUrl("");
+      this.setTooltip("Este bloque rompe la ejecución de un bucle");
     }
   };
 
@@ -81,8 +78,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setOutput(true, null);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#644A9E");
-      this.setTooltip("");
-      this.setHelpUrl("");
+      this.setTooltip("Bloque de variable de iteración");
     }
   };
 }

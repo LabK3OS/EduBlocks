@@ -1,6 +1,6 @@
 <category name="Logica" colour="#49B04D" iconclass="blocklyTreeIconCustom logic">
 
-  <label text="Logic" web-class="myLabelStyle"></label>
+  <label text="Bloques de logica condicional" web-class="myLabelStyle"></label>
   <block type="webifinline">
     <value name="iftext">
       <shadow type="textinline">

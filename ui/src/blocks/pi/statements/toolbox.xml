@@ -1,23 +1,23 @@
 <category name="Declaraciones" colour="#F89621" iconclass="blocklyTreeIconCustom statements">
 
-  <label text="Statements" web-class="myLabelStyle"></label>
+  <label text="Bloques de proposito general" web-class="myLabelStyle"></label>
   <block type="websleepnew">
-      <value name="sleep">
-        <shadow type="textinline">
-          <field name="text">1</field>
-        </shadow>
-      </value>
-  </block> 
- 
-  <block type="webtypeanything">
-      <value name="stuff">
-        <shadow type="textinline">
-          <field name="text">     </field>
-        </shadow>
-      </value>
+    <value name="sleep">
+      <shadow type="textinline">
+        <field name="text">1</field>
+      </shadow>
+    </value>
   </block>
 
-  
+  <block type="webtypeanything">
+    <value name="stuff">
+      <shadow type="textinline">
+        <field name="text"></field>
+      </shadow>
+    </value>
+  </block>
+
+
   <!-- <block type="webequalsblocknew">
       <value name="text1">
         <shadow type="textinline">
@@ -35,44 +35,125 @@
   <block type="webdf">
     <value name="def">
       <shadow type="textinline">
-          <field name="text">function_name</field>
-        </shadow>
-      </value>
+        <field name="text">Funcion</field>
+      </shadow>
+    </value>
     <value name="params">
       <shadow type="textinline">
-          <field name="text"></field>
-        </shadow>
-      </value>
+        <field name="text"></field>
+      </shadow>
+    </value>
   </block>
-  <block type="webpass"></block>
+  <block type="webrtdf">
+    <value name="def">
+      <shadow type="textinline">
+        <field name="text">Funcion</field>
+      </shadow>
+    </value>
+    <value name="params">
+      <shadow type="textinline">
+        <field name="text"></field>
+      </shadow>
+    </value>
+  </block>
 
-  <block type="webprintnew">
-      <value name="text">
-        <shadow type="textinline">
-          <field name="text">Hello World</field>
-        </shadow>
-      </value>
+  <block type="commas">
+    <value name="val1">
+      <shadow type="textinline">
+        <field name="text"></field>
+      </shadow>
+    </value>
+    <value name="val2">
+      <shadow type="textinline">
+        <field name="text"></field>
+      </shadow>
+    </value>
   </block>
+
+  <block type="webobj">
+    <value name="def">
+      <shadow type="textinline">
+        <field name="text">Objeto</field>
+      </shadow>
+    </value>
+    <value name="params">
+      <shadow type="textinline">
+        <field name="text">Funcion</field>
+      </shadow>
+    </value>
+  </block>
+
+  <block type="webrtobj">
+    <value name="def">
+      <shadow type="textinline">
+        <field name="text">Objeto</field>
+      </shadow>
+    </value>
+    <value name="params">
+      <shadow type="textinline">
+        <field name="text">Funcion</field>
+      </shadow>
+    </value>
+  </block>
+
+  <block type="webAsgnObj">
+    <value name="text">
+      <shadow type="textinline">
+        <field name="text">Elemento</field>
+      </shadow>
+    </value>
+    <value name="text1">
+      <shadow type="textinline">
+        <field name="text">valor</field>
+      </shadow>
+    </value>
+  </block>
+
+  <block type="webAsgnPrm">
+    <value name="text">
+      <shadow type="textinline">
+        <field name="text">argumento</field>
+      </shadow>
+    </value>
+    <value name="text1">
+      <shadow type="textinline">
+        <field name="text">valor</field>
+      </shadow>
+    </value>
+  </block>
+
+
+  <block type="webbltext">
+    <value name="NAME">
+      <shadow type="stringinline">
+        <field name="text">Texto</field>
+      </shadow>
+    </value>
+  </block>
+
+
+
   <block type="webvarprint">
-  <value name="var">
-        <shadow type="textinline">
-          <field name="text">Variable</field>
-        </shadow>
-      </value>
+    <value name="var">
+      <shadow type="textinline">
+        <field name="text">Variable</field>
+      </shadow>
+    </value>
   </block>
+
   <block type="input_web">
-  <value name="NAME">
-        <shadow type="stringinline">
-          <field name="text">What is your name?</field>
-        </shadow>
-      </value>
+    <value name="NAME">
+      <shadow type="textinline">
+        <field name="text">"Cual es tu nombre"</field>
+      </shadow>
+    </value>
   </block>
   <block type="global">
-      <value name="text">
-        <shadow type="textinline">
-          <field name="text">variable</field>
-        </shadow>
-      </value>
+    <value name="text">
+      <shadow type="textinline">
+        <field name="text">variable</field>
+      </shadow>
+    </value>
   </block>
   <block type="webint">
     <value name="bool">
@@ -88,5 +169,5 @@
       </shadow>
     </value>
   </block>
-
+  <block type="webpass"></block>
 </category>

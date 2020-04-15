@@ -402,9 +402,9 @@ export default class Page extends Component<Props, State> {
         />
 
         <AlertModal
-          title='Attention!'
+          title='Cuidado!'
           visible={this.state.modal === 'pythonOverwritten'}
-          text='Python changes have been overwritten!'
+          text='Los cambios hechos directamente en el código serán descartados!'
           onCancel={() => { }}
           onButtonClick={(key) => key === 'close' && this.closeModal()}
         />
@@ -429,7 +429,7 @@ export default class Page extends Component<Props, State> {
         <AlertModal
           title='Attention!'
           visible={this.state.modal === 'noCode'}
-          text='There is no code to run!'
+          text='No hay código para ejecutar!'
           onCancel={() => { }}
           onButtonClick={(key) => key === 'close' && this.closeModal()}
         />

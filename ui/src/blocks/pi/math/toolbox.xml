@@ -1,6 +1,6 @@
 <category name="Matemáticas" colour="#1B173D" iconclass="blocklyTreeIconCustom math">
 
-  <label text="Math" web-class="myLabelStyle"></label>
+  <label text="Operaciones matemáticas" web-class="myLabelStyle"></label>
 
   <block type="operators2">
     <value name="first">

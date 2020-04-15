@@ -17,8 +17,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#CDDA36");
-      this.setTooltip('');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('Este bloque permite crear una función');
     },
   };
 
@@ -32,8 +31,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setNextStatement(true, null);
       this.setColour("#CDDA36");
-      this.setTooltip('');
-      this.setHelpUrl('');
+      this.setTooltip('Este bloque permite definir el valor de retorno de una función, en caso de no colocarse, la función no retorna nada.');
     },
   };
 
@@ -50,8 +48,8 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#CDDA36");
-      this.setTooltip('Class Statement.');
-      this.setHelpUrl('');
+      this.setTooltip('Con este bloque se puede crear un objeto.');
+
     },
   };
 

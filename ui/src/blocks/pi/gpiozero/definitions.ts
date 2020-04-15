@@ -2,11 +2,11 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['importgpiozero'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('from gpiozero import *');
+        .appendField('import gpiozero');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#ff0066");
-      this.setTooltip('Import the gpiozero library');
+      this.setTooltip('Importar librería de entradas y salidas');
       this.setHelpUrl('http://gpiozero.readthedocs.io');
     },
   };
@@ -14,11 +14,11 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['importtime'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('from datetime import time');
+        .appendField('import datetime');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#ff0066");
-      this.setTooltip('Import the datetime library');
+      this.setTooltip('Importar librería para obtener la hora del día');
       this.setHelpUrl('http://gpiozero.readthedocs.io');
     },
   };

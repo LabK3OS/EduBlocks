@@ -7,8 +7,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#ff0066");
-      this.setTooltip('Use this to import minecraft.');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('importar librería de Minecraft.');
     },
   };
 

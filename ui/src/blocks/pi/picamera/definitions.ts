@@ -2,11 +2,11 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['import_picamera'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField("from picamera import *");
+        .appendField("import picamera");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#ff0066");
-      this.setTooltip("Import PiCamera and Color library");
+      this.setTooltip("Importar librería PiCamera para usar la cámara");
       this.setHelpUrl("");
     }
   };

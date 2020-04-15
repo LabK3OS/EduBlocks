@@ -1,7 +1,7 @@
 export default function define(Python: Blockly.BlockGenerators) {
   Python['importmb'] = function (block) {
     // TODO: Assemble Python into code variable.
-    var code = 'import microbit\n';
+    var code = 'import threading\n';
     return code;
   };
 

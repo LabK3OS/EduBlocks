@@ -1,7 +1,7 @@
 export default function define(Python: Blockly.BlockGenerators) {
   Python['import_sonic'] = function (block) {
     // TODO: Assemble Python into code variable.
-    let code = 'from psonic import *\n';
+    let code = 'import psonic as ps\n';
     return code;
   };
 

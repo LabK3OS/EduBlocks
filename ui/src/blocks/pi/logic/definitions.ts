@@ -14,7 +14,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#49B04D");
-      this.setTooltip('If block with inline input');
+      this.setTooltip('Se ejecutan los bloques internos, en caso de que la condición se cierta');
       this.setHelpUrl('');
     },
   };
@@ -33,7 +33,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#49B04D");
-      this.setTooltip('ElIf block with inline input');
+      this.setTooltip('Se ejecutan los bloques internos, en caso de que el contenido del bloque if anterior no se halla ejecutado, y la condición se cierta');
       this.setHelpUrl('');
     },
   };
@@ -47,7 +47,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#49B04D");
-      this.setTooltip('Else statement');
+      this.setTooltip('Se ejecutan los bloques internos, en caso de que los bloques if o elif anteriores, no hallan ejecutado los bloques en su interior');
       this.setHelpUrl('');
     },
   };
@@ -82,7 +82,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setOutput(true, null);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#49B04D");
-      this.setTooltip("");
+      this.setTooltip("Con este bloque se realizan las comparaciones que retornan verdadero o falso, y son utilizadas en la condición del bloque if, elif ");
       this.setHelpUrl("");
     }
   };
@@ -99,7 +99,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setOutput(true, null);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#49B04D");
-      this.setTooltip("");
+      this.setTooltip("Con este bloque, es posible hacer operaciones lógicas");
       this.setHelpUrl("");
     }
   };
@@ -114,8 +114,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setOutput(true, null);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#49B04D");
-      this.setTooltip('negates a Boolean value');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('Convierte un valor verdadero en falso y viceversa');
     },
   };
 

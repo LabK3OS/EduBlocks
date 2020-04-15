@@ -8,8 +8,8 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#FF0066");
-      this.setTooltip('Imports the time library.');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('Importar librería de espera de tiempo.');
+      
     },
   };
 
@@ -20,20 +20,18 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#FF0066");
-      this.setTooltip('Imports the pygal library.');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('Importar librería para gráficos estadísticos.');
     },
   };
  
   Blocks['import_processing'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('from processing import *');
+        .appendField('import processing');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#FF0066");
-      this.setTooltip('Imports the pygal library.');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('Importar librería de Processing.');
     },
   };
 
@@ -45,10 +43,30 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setNextStatement(true, null);
       this.setColour("#FF0066");
       this.setTooltip('Imports the signal library.');
-      this.setHelpUrl('http://www.example.com/');
     },
   };
-
+  
+  Blocks['senseimport'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('import numpy');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour("#FF0066");
+      this.setTooltip('Importar librería numpy para matrices.');
+    },
+  };
+  
+  Blocks['senseimportemu'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('import face_recognition');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour("#FF0066");
+      this.setTooltip('Importar librería de reconocimiento facial.');
+    },
+  };
   Blocks['pause_s'] = {
     init: function () {
       this.appendDummyInput()
@@ -68,8 +86,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#FF0066");
-      this.setTooltip('Imports the random library.');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('Importar librería de números aleatorios');
     },
   };
 
@@ -349,8 +366,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#FF0066");
-      this.setTooltip('Imports the math library.');
-      this.setHelpUrl('http://www.example.com/');
+      this.setTooltip('Importar librería de matemáticas');
     },
   };
 

@@ -39,7 +39,7 @@ export default class AlertModal<T extends AlertModalOption> extends Component<Al
           </section>
           <footer class="alertFooter">
             <label for="modal_1" class="button dangerous" onClick={() => this.props.onButtonClick('close')}>
-              Close
+              Cerrar
             </label>
           </footer>
         </article>

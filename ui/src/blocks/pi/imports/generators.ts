@@ -15,9 +15,20 @@ export default function define(Python: Blockly.BlockGenerators) {
   };
 
   Python['import_processing'] = function (block) {
-    const code = 'from processing import *\n';
+    const code = 'from p5 import *\n';
     return code;
   };
+
+
+  Python['senseimport'] = function (block) {
+    const code = 'import numpy as np\n';
+    return code;
+  }; 
+
+  Python['senseimportemu'] = function (block) {
+    const code = 'import face_recognition\n';
+    return code;
+  }; 
 
   Python['pause_s'] = function (block) {
     const code = 'pause()\n';
