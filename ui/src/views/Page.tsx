@@ -415,7 +415,7 @@ export default class Page extends Component<Props, State> {
           text='Cambiar de modo eliminara tu código, deseas continuar?'
           onCancel={() => { }}
           onButtonClick={(key) => key === 'close' && this.closeModal()}
-          onYes={(key1) => key1 === 'Si' && this.openPlatforms()}
+          onYes={(key1) => key1 === 'yes' && this.openPlatforms()}
         />
 
         <AlertModal

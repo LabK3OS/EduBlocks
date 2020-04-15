@@ -41,8 +41,8 @@ export default class OverModal<T extends OverModalOption> extends Component<Over
             <label for="modal_1" class="button dangerous" onClick={() => this.props.onButtonClick('close')}>
               No
             </label>
-            <label for="modal_1" class="button buttonFloatRight buttonMarginRight" onClick={() => this.props.onYes('Si')}>
-              Yes
+            <label for="modal_1" class="button buttonFloatRight buttonMarginRight" onClick={() => this.props.onYes('yes')}>
+              Si
             </label>
           </footer>
         </article>

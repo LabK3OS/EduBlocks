@@ -28,7 +28,7 @@ export default class ImageModal<T extends ImageModalOption> extends Component<Im
           {option.title}
           <img src={option.image} />
           <div className='ImageModalOptionButtonContainer'>
-            <button onClick={() => this.props.onSelect(option)}>Select</button>
+            <button onClick={() => this.props.onSelect(option)}>Seleccionar</button>
             <a class='icon-help-circled' style='color:#aaa' href={option.help}></a>
           </div>
         </div>
