@@ -5,12 +5,12 @@
   <block type="operators2">
     <value name="first">
       <shadow type="textinline">
-        <field name="text">True</field>
+        <field name="text">1</field>
       </shadow>
     </value>
     <value name="last">
       <shadow type="textinline">
-        <field name="text">True</field>
+        <field name="text">2</field>
       </shadow>
     </value>
   </block>

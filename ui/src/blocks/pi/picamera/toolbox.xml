@@ -1,11 +1,22 @@
 <category name="PiCamera" colour="#1B173C" iconclass="blocklyTreeIconCustom camera">
+    <label text="Bloques para uso de cámara" web-class="myLabelStyle"></label>
 
-    <label text="PiCamera" web-class="myLabelStyle"></label>
-    <block type="create_camera"></block>
+    <block type="create_camera">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
+    </block>
     <block type="setrotation">
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
+            </shadow>
+        </value>
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
             </shadow>
         </value>
     </block>
@@ -15,8 +26,18 @@
                 <field name="text"></field>
             </shadow>
         </value>
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
     </block>
     <block type="stop_preview">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -24,6 +45,11 @@
         </value>
     </block>
     <block type="capture_savepath">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="stringinline">
                 <field name="text"></field>
@@ -31,6 +57,11 @@
         </value>
     </block>
     <block type="capture_savepathmore">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -38,6 +69,11 @@
         </value>
     </block>
     <block type="start_recording">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="stringinline">
                 <field name="text"></field>
@@ -45,6 +81,11 @@
         </value>
     </block>
     <block type="wait_recording">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -52,6 +93,11 @@
         </value>
     </block>
     <block type="stop_recording">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -59,6 +105,11 @@
         </value>
     </block>
     <block type="set_resolution">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -71,6 +122,11 @@
         </value>
     </block>
     <block type="set_framerate">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -78,6 +134,11 @@
         </value>
     </block>
     <block type="set_textsize">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -85,6 +146,11 @@
         </value>
     </block>
     <block type="show_text">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -92,6 +158,11 @@
         </value>
     </block>
     <block type="set_brightness">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
@@ -99,13 +170,36 @@
         </value>
     </block>
     <block type="set_contrast">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
         <value name="text">
             <shadow type="textinline">
                 <field name="text"></field>
             </shadow>
         </value>
     </block>
-    <block type="image_effect"></block>
-    <block type="awb_mode"></block>
-    <block type="exposure_mode"></block>
+    <block type="image_effect">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="awb_mode">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="exposure_mode">
+        <value name="camera">
+            <shadow type="textinline">
+                <field name="text">camara</field>
+            </shadow>
+        </value>
+    </block>
 </category>  

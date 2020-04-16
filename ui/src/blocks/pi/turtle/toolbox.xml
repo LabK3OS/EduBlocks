@@ -1,5 +1,5 @@
 <category name="Turtle" colour="#7289DA" iconclass="blocklyTreeIconCustom turtle">
-
+  <label text="Bloques para generación de gráficos con Turtle" web-class="myLabelStyle"></label>
     <block type="turtle"></block>
     <block type="screeninit"></block>
     <block type="colourmode">

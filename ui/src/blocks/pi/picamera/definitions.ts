@@ -11,10 +11,13 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     }
   };
 
+
   Blocks['create_camera'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera = PiCamera()");
+        .appendField(" = PiCamera()");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#1B173C");
@@ -24,8 +27,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['setrotation'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.rotation = ")
+        .appendField(".rotation = ")
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -39,8 +44,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
 
   Blocks['start_preview'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.start_preview(")
+        .appendField(".start_preview(")
         this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -55,8 +62,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
 
   Blocks['stop_preview'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.stop_preview()")
+        .appendField(".stop_preview()")
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#1B173C");
@@ -67,8 +76,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
 
   Blocks['capture_savepath'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.capture(")
+        .appendField(".capture(")
         this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -82,8 +93,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['capture_savepathmore'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.capture(")
+        .appendField(".capture(")
         this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -97,8 +110,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['start_recording'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.start_recording(")
+        .appendField(".start_recording(")
         this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -112,8 +127,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['wait_recording'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.wait_recording( ")
+        .appendField(".wait_recording( ")
         this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -127,8 +144,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['stop_recording'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.stop_recording()");
+        .appendField(".stop_recording()");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#1B173C");
@@ -138,8 +157,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['set_resolution'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.resolution = ( ")
+        .appendField(".resolution = ( ")
         this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -157,8 +178,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['set_framerate'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.framerate = ")
+        .appendField(".framerate = ")
         this.appendValueInput("text")
         .setCheck(null);
       this.setPreviousStatement(true, null);
@@ -170,8 +193,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['set_textsize'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.annotate_text_size = ")
+        .appendField(".annotate_text_size = ")
         this.appendValueInput("text")
         .setCheck(null);
       this.setPreviousStatement(true, null);
@@ -183,8 +208,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['show_text'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.annotate_text =")
+        .appendField(".annotate_text =")
         this.appendValueInput("text")
         .setCheck(null);
       this.setPreviousStatement(true, null);
@@ -196,8 +223,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['set_brightness'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.brightness = ")
+        .appendField(".brightness = ")
         this.appendValueInput("text")
         .setCheck(null);
       this.setPreviousStatement(true, null);
@@ -209,8 +238,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['set_contrast'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.contrast = ")
+        .appendField(".contrast = ")
         this.appendValueInput("text")
         .setCheck(null);
       this.setPreviousStatement(true, null);
@@ -222,8 +253,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['image_effect'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.image_effect = ")
+        .appendField(".image_effect = ")
         .appendField(new Blockly.FieldDropdown([["none", "'none'"], ["negative", "'negative'"], ["solarize", "'solarize'"], ["sketch", "'sketch'"], ["denoise", "'denoise'"], ["emboss", "'emboss'"], ["olipaint", "'olipaint'"], ["hatch", "'hatch'"], ["gpen", "'gpen'"], ["pastel", "'pastel'"], ["watercolor", "'watercolor'"], ["film", "'film'"], ["blur", "'blur'"], ["saturation", "'saturation'"], ["colorswap", "'colorswap'"], ["washedout", "'washedout'"], ["posterise", "'posterise'"], ["colorpoint", "'colorpoint'"], ["colorbalance", "'colorbalance'"], ["cartoon", "'cartoon'"], ["deinterlace1", "'deinterlace1'"], ["deinterlace2", "'deinterlace2'"]]), "OP");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -234,8 +267,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['awb_mode'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.awb_mode = ")
+        .appendField(".awb_mode = ")
         .appendField(new Blockly.FieldDropdown([["auto", "'auto'"], ["off", "'off'"], ["sunlight", "'sunlight'"], ["cloudy", "'cloudy'"], ["shade", "'shade'"], ["tungsten", "'tungsten'"], ["fluorescent", "'fluorescent'"], ["incandescent", "'incandescent'"], ["flash", "'flash'"], ["horizon", "'horizon'"]]), "OP");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -246,8 +281,10 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   };
   Blocks['exposure_mode'] = {
     init: function () {
+      this.appendValueInput("camera")
+        .setCheck(null);
       this.appendDummyInput()
-        .appendField("camera.exposure_mode = ")
+        .appendField(".exposure_mode = ")
         .appendField(new Blockly.FieldDropdown([["auto", "'auto'"], ["off", "'off'"], ["night", "'night'"], ["nightpreview", "'nightpreview'"], ["backlight", "'backlight'"], ["spotlight", "'spotlight'"], ["sports", "'sports'"], ["snow", "'snow'"], ["beach", "'beach'"], ["verylong", "'verylong'"], ["fixedfps", "'fixedfps'"], ["antishake", "'antishake'"], ["fireworks", "'fireworks'"]]), "OP");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
