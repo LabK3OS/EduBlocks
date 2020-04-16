@@ -203,7 +203,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['p_framerate_set'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField("frameRate(");
+        .appendField("setFrameRate(");
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -367,11 +367,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['p_nostroke'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField("noFill(");
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(")");
+        .appendField("noStroke()");
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
@@ -569,24 +565,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     }
   };
 
-  Blocks['p_stroke3'] = {
-    init: function() {
-      this.appendDummyInput()
-          .appendField("stroke")
-          .appendField(new Blockly.FieldDropdown([["Cap","Cap"], ["Join","Join"], ["Weight","Weight"]]), "NAME")
-          .appendField("(");
-      this.appendValueInput("text")
-          .setCheck(null);
-      this.appendDummyInput()
-          .appendField(")");
-      this.setInputsInline(true);
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(pro_col);
-   this.setTooltip("");
-   this.setHelpUrl("");
-    }
-  };
+
   
   Blocks['p_text'] = {
     init: function () {
@@ -607,10 +586,31 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     }
   };
 
+  Blocks['p_textsize'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("textSize(");
+      this.appendValueInput("text")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(")");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      
+      this.setColour(pro_col);
+      
+      this.setTooltip("");
+      this.setHelpUrl("");
+    }
+  };
+
+  
+
   Blocks['p_translate'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField("stroke(");
+        .appendField("translate(");
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -629,7 +629,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['p_triangle'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField("stroke(");
+        .appendField("triangle(");
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -645,5 +645,44 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     }
   };
 
+  Blocks['p_loadimage'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("loadImage(");
+      this.appendValueInput("text")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(")");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      
+      this.setColour(pro_col);
+      
+      this.setTooltip("");
+      this.setHelpUrl("");
+    }
+  };
+  Blocks['p_image'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("image(");
+      this.appendValueInput("text")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(")");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      
+      this.setColour(pro_col);
+      
+      this.setTooltip("");
+      this.setHelpUrl("");
+    }
+  };
+
+  
+  
 }
 

@@ -1,7 +1,7 @@
 <category name="Graficas" colour="#008FD1" iconclass="blocklyTreeIconCustom graphs">
 
 
-  <label text="Graphs" web-class="myLabelStyle"></label>
+  <label text="Creación de gráficas de estadística" web-class="myLabelStyle"></label>
 
   <block type="chart_type">
     <value name="text">

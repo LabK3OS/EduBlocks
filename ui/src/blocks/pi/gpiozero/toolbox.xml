@@ -1,5 +1,6 @@
 <category name="gpiozero" colour="#E4E436" iconclass="blocklyTreeIconCustom gpio">
   <category name="Entradas" colour="#16AEE5">
+  <label text="Bloques de entradas genericas" web-class="myLabelStyle"></label>
     <block type="createGenericInput">
       <value name="text">
           <shadow type="textinline">
@@ -156,6 +157,7 @@
     </category>
   </category>
   <category name="Salidas" colour="#E51616">
+  <label text="Bloques de salidas genericas" web-class="myLabelStyle"></label>
     <block type="createGenericOutput">
       <value name="text">
           <shadow type="textinline">

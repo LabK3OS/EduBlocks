@@ -13,7 +13,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setOutput(true, null);
       this.setColour(rand_col);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
-      this.setTooltip("Choose a random element from a non-empty sequence.");
+      this.setTooltip("Retorna aleatoriamente un elemento de una lista.");
       this.setHelpUrl("");
     }
   };
@@ -25,21 +25,8 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
-        .appendField(")");
-      this.setInputsInline(true);
-      this.setOutput(true, null);
-      this.setColour(rand_col);
-      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
-      this.setTooltip("Return random integer in range [a, b], including both end points.");
-      this.setHelpUrl("");
-    }
-  };
-
-  Blocks['random_random'] = {
-    init: function () {
-      this.appendDummyInput()
-        .appendField("random.random(");
-      this.appendValueInput("text")
+        .appendField(",");
+        this.appendValueInput("text1")
         .setCheck(null);
       this.appendDummyInput()
         .appendField(")");
@@ -47,7 +34,20 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setOutput(true, null);
       this.setColour(rand_col);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
-      this.setTooltip("random() -> x in the interval [0, 1).");
+      this.setTooltip("Retorna un numero entero aleatorio entre [minimo, maximo).");
+      this.setHelpUrl("");
+    }
+  };
+
+  Blocks['random_random'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("random.random()");
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setColour(rand_col);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+      this.setTooltip("Retorna un numero real aleatorio entre [0, 1).");
       this.setHelpUrl("");
     }
   };
@@ -59,13 +59,20 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
+        .appendField(",");
+      this.appendValueInput("text1")      
+        .setCheck(null);
+        this.appendDummyInput()
+        .appendField(",");
+      this.appendValueInput("text2")      
+        .setCheck(null);
+      this.appendDummyInput()
         .appendField(")");
       this.setInputsInline(true);
       this.setOutput(true, null);
       this.setColour(rand_col);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
-      this.setTooltip("Choose a random item from range(start, stop[, step]).");
-      this.setHelpUrl("");
+      this.setTooltip("Retorna un numero entero en el rango (minimo,maximo], con un paso definido por el usuario. Ejemplo: (0,7,2) podrá generar los números 0, 2, 4, 6.");
     }
   };
 
@@ -81,7 +88,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setOutput(true, null);
       this.setColour(rand_col);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
-      this.setTooltip("Initialize internal state from hashable object.");
+      this.setTooltip("Cambiar semilla de generación de números aleatorios.");
       this.setHelpUrl("");
     }
   };
@@ -98,7 +105,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setOutput(true, null);
       this.setColour(rand_col);
       this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
-      this.setTooltip("Shuffle list");
+      this.setTooltip("Reorganizar lista de forma aleatoria.");
       this.setHelpUrl("");
     }
   };

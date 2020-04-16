@@ -1,7 +1,7 @@
 <category name="Processing" colour="#c51a4a" iconclass="blocklyTreeIconCustom processing">
 
 
-  <label text="Processing" web-class="myLabelStyle"></label>
+  <label text="Bloques de Processing" web-class="myLabelStyle"></label>
 
   <block type="p_arc">
     <value name="text">
@@ -127,13 +127,6 @@
     </value>
   </block>
 
-  <block type="p_noloop">
-    <value name="text">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-  </block>
 
   <block type="p_nofill">
     <value name="text">
@@ -151,13 +144,7 @@
     </value>
   </block>
 
-  <block type="p_nosmooth">
-    <value name="text">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-  </block>
+
 
   <block type="p_nostroke">
     <value name="text">
@@ -217,13 +204,7 @@
     </value>
   </block>
 
-  <block type="p_set">
-    <value name="text">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-  </block>
+
 
   <block type="p_size">
     <value name="text">
@@ -241,7 +222,9 @@
     </value>
   </block>
 
-  <block type="p_stroke3">
+
+
+  <block type="p_text">
     <value name="text">
       <shadow type="textinline">
         <field name="text"></field>
@@ -249,7 +232,7 @@
     </value>
   </block>
 
-  <block type="p_text">
+  <block type="p_textsize">
     <value name="text">
       <shadow type="textinline">
         <field name="text"></field>
@@ -266,6 +249,22 @@
   </block>
 
   <block type="p_triangle">
+    <value name="text">
+      <shadow type="textinline">
+        <field name="text"></field>
+      </shadow>
+    </value>
+  </block>
+
+  <block type="p_loadimage">
+    <value name="text">
+      <shadow type="textinline">
+        <field name="text"></field>
+      </shadow>
+    </value>
+  </block>
+
+  <block type="p_image">
     <value name="text">
       <shadow type="textinline">
         <field name="text"></field>

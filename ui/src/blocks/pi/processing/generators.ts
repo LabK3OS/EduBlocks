@@ -82,7 +82,7 @@ export default function define(Python: Blockly.BlockGenerators) {
   Python['p_framerate_set'] = function(block) {
     var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
-    var code = 'frameRate(' +value_text+ ')\n';
+    var code = 'set_frame_rate()(' +value_text+ ')\n';
     return code;
   };
 
@@ -132,6 +132,14 @@ export default function define(Python: Blockly.BlockGenerators) {
     var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
     var code = 'nosmooth(' +value_text+ ')\n';
+    return code;
+  };
+
+  
+  Python['p_nostroke'] = function(block) {
+    var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    // TODO: Assemble Python into code variable.
+    var code = 'no_stroke()\n';
     return code;
   };
 
@@ -204,13 +212,6 @@ export default function define(Python: Blockly.BlockGenerators) {
     return code;
   };
 
-  Python['p_stroke3'] = function(block) {
-    var dropdown_name = block.getFieldValue('NAME');
-    var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
-    // TODO: Assemble Python into code variable.
-    var code = 'stroke' +dropdown_name+ '(' +value_text+ ')\n';
-    return code;
-  };
 
   Python['p_text'] = function(block) {
     var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
@@ -219,18 +220,43 @@ export default function define(Python: Blockly.BlockGenerators) {
     return code;
   };
 
+  Python['p_textsize'] = function(block) {
+    var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    // TODO: Assemble Python into code variable.
+    var code = 'text_font(create_font("/home/pi/Desktop/.Extras/Memorial Lane.otf",' +value_text+ '),10)\n';
+    return code;
+  };
+
+
+
   Python['p_translate'] = function(block) {
     var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
-    var code = 'stroke(' +value_text+ ')\n';
+    var code = 'translate(' +value_text+ ')\n';
     return code;
   };
 
   Python['p_triangle'] = function(block) {
     var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
-    var code = 'stroke(' +value_text+ ')\n';
+    var code = 'triangle(' +value_text+ ')\n';
     return code;
   };
+
+  Python['p_loadimage'] = function(block) {
+    var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    // TODO: Assemble Python into code variable.
+    var code = 'load_image(' +value_text+ ')\n';
+    return code;
+  };
+  Python['p_image'] = function(block) {
+    var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    // TODO: Assemble Python into code variable.
+    var code = 'image(' +value_text+ ')\n';
+    return code;
+  };
+
+  
+  
 
 }

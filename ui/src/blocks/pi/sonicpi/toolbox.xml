@@ -1,15 +1,16 @@
 <category name="Sonic Pi" colour="#16E3E3" iconclass="blocklyTreeIconCustom sonic">
+  <label text="Bloques de SonicPI" web-class="myLabelStyle"></label>
   <block type="sampleson">
   <value name="text">
       <shadow type="textinline">
-        <field name="text">PROPHET</field>
+        <field name="text">AMBI_LUNAR_LAND, rate=1, attack=1, sustain=1, release=1, beat_stretch=1, start=0, finish=1, amp=1, pan=0</field>
       </shadow>
     </value>
   </block>
   <block type="play">
   <value name="text">
       <shadow type="textinline">
-        <field name="text">60</field>
+        <field name="text">60,attack= 0.5, decay=1, sustain_level=1, sustain=1, release=1, cutoff=1, cutoff_attack=1, amp=1, pan= 1</field>
       </shadow>
     </value>
   </block>
@@ -27,5 +28,5 @@
       </shadow>
     </value>
   </block>
-  <block type="liveloop"></block>
+
 </category> 

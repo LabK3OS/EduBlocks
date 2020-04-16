@@ -1,12 +1,10 @@
 <category name="Aletorios" colour="#8BC248" iconclass="blocklyTreeIconCustom random">
-
-
-  <label text="Random" web-class="myLabelStyle"></label>
+  <label text="Bloques para generar de números aleatorios" web-class="myLabelStyle"></label>
 
   <block type="random_choice">
     <value name="text">
       <shadow type="textinline">
-        <field name="text"></field>
+        <field name="text">lista</field>
       </shadow>
     </value>
   </block>
@@ -14,23 +12,33 @@
   <block type="random_randint">
     <value name="text">
       <shadow type="textinline">
-        <field name="text"></field>
+        <field name="text">minimo</field>
+      </shadow>
+    </value>
+
+    <value name="text1">
+      <shadow type="textinline">
+        <field name="text">maximo</field>
       </shadow>
     </value>
   </block>
 
-  <block type="random_random">
-    <value name="text">
-      <shadow type="textinline">
-        <field name="text"></field>
-      </shadow>
-    </value>
-  </block>
+  <block type="random_random"></block>
  
   <block type="random_randrange">
     <value name="text">
       <shadow type="textinline">
-        <field name="text"></field>
+        <field name="text">minimo</field>
+      </shadow>
+    </value>
+    <value name="text1">
+      <shadow type="textinline">
+        <field name="text">maximo</field>
+      </shadow>
+    </value>
+    <value name="text2">
+      <shadow type="textinline">
+        <field name="text">paso</field>
       </shadow>
     </value>
   </block>
@@ -38,7 +46,7 @@
   <block type="random_seed">
     <value name="text">
       <shadow type="textinline">
-        <field name="text"></field>
+        <field name="text">semilla</field>
       </shadow>
     </value>
   </block>
@@ -46,7 +54,7 @@
   <block type="random_shuffle">
     <value name="text">
       <shadow type="textinline">
-        <field name="text"></field>
+        <field name="text">lista</field>
       </shadow>
     </value>
   </block>

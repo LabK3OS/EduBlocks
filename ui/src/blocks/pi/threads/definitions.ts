@@ -10,26 +10,12 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setHelpUrl("");
     }
   };
-  Blocks['displayscrolltext'] = {
+  Blocks['createTH'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField("microbit.display.scroll(\"")
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField("\")");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour("#C227E2");
-      this.setTooltip("");
-      this.setHelpUrl("");
-    }
-  };
-
-  Blocks['displayscrollvar'] = {
-    init: function () {
-      this.appendDummyInput()
-        .appendField("microbit.display.scroll(")
+        .appendField("CrearHilo")
+        .appendField(new Blockly.FieldDropdown([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]), 'num')
+        .appendField("(");
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -42,42 +28,12 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     }
   };
 
-  Blocks['microsleep'] = {
+  Blocks['startTH'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField("microbit.sleep(")
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(")");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour("#C227E2");
-      this.setTooltip("");
-      this.setHelpUrl("");
-    }
-  };
+        .appendField("iniciarHilo")
+        .appendField(new Blockly.FieldDropdown([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]), 'num')
 
-  Blocks['displayshow'] = {
-    init: function () {
-      this.appendDummyInput()
-        .appendField("microbit.display.show(")
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(")");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour("#C227E2");
-      this.setTooltip("");
-      this.setHelpUrl("");
-    }
-  };
-
-  Blocks['displayclear'] = {
-    init: function () {
-      this.appendDummyInput()
-        .appendField("microbit.display.clear()");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#C227E2");

@@ -5,38 +5,20 @@ export default function define(Python: Blockly.BlockGenerators) {
     return code;
   };
 
-  Python['displayscrolltext'] = function (block) {
+  Python['createTH'] = function (block) {
     var text_message = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    var text_choose = block.getFieldValue('num');
     // TODO: Assemble Python into code variable.
-    var code = 'microbit.display.scroll("' + text_message + '")\n';
+    var code = 'hilo'+ text_choose +' = threading.Thread(target = '+text_message +', name = "' + text_message +'")\n';
     return code;
   };
 
-  Python['displayscrollvar'] = function (block) {
-    var text_varmess = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+  Python['startTH'] = function (block) {
+    var text_choose = block.getFieldValue('num');
     // TODO: Assemble Python into code variable.
-    var code = 'microbit.display.scroll(' + text_varmess + ')\n';
+    var code = 'hilo' + text_choose + '.start()\n';
     return code;
   };
 
-  Python['microsleep'] = function (block) {
-    var text_time = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
-    // TODO: Assemble Python into code variable.
-    var code = 'microbit.sleep(' + text_time + ')\n';
-    return code;
-  };
 
-  Python['displayshow'] = function (block) {
-    var text_show = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
-    // TODO: Assemble Python into code variable.
-    var code = 'microbit.display.show(' + text_show + ')\n';
-    return code;
-  };
-
-  Python['displayclear'] = function (block) {
-    // var text_show = block.getFieldValue('show');
-    // TODO: Assemble Python into code variable.
-    var code = 'microbit.display.clear()\n';
-    return code;
-  };
 }
