@@ -37,7 +37,7 @@ export default function define(Python: Blockly.BlockGenerators) {
   Python['chart_render'] = function(block) {
     var variable_name = Blockly.Python.variableDB_.getName(block.getFieldValue('name'), Blockly.Variables.NAME_TYPE);
     // TODO: Assemble Python into code variable.
-    var code = variable_name+ '.render()\n';
+    var code = variable_name+ '.render_to_file("/home/pi/Desktop/grafico.svg")\n';
     return code;
   };
 }
