@@ -1230,6 +1230,216 @@
       </block>
     </next>
   </block>
+  <block type="import_time" id="s3cJn^|Nuydb+j.hlQlM" x="-1581" y="-2132">
+    <next>
+      <block type="importgpiozero" id="73)K$00PTn@Zm%y:180T">
+        <next>
+          <block type="ledset" id="I8%[8I+c(zb7qVWMr1-U">
+            <field name="led" id="A5l0{5L#k$vEb.oilzU:" variabletype="">led</field>
+            <value name="text">
+              <shadow type="textinline" id="Y$hN9(uHNHq{I8aIEroC">
+                <field name="text">20</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="variables_set" id="7LzC3.mLeL6[u+#GYFz*">
+                <field name="VAR" id="L^FZ=L|l8|QRqu7CD5g:" variabletype="">maquina</field>
+                <field name="NAME">=</field>
+                <value name="varset">
+                  <shadow type="textinline" id="++jP6d}7r85u=/:Z79s:">
+                    <field name="text">0</field>
+                  </shadow>
+                  <block type="webrtdf" id="X+goah!Iz$rYyxpFR_1T">
+                    <value name="def">
+                      <shadow type="textinline" id="bI:GR!lQI)IN@1)$jzD4">
+                        <field name="text">Maquina_de_reconocimiento_facial</field>
+                      </shadow>
+                    </value>
+                    <value name="params">
+                      <shadow type="textinline" id="Q,0SIguEr|x~LJIjGjvW">
+                        <field name="text"></field>
+                      </shadow>
+                      <block type="commas" id="l)94SuLQ^arPz}#5@q{o">
+                        <value name="val1">
+                          <shadow type="textinline" id="VrEZ(%dv66SZ(1I!hvJc">
+                            <field name="text">"/home/pi/Desktop/shakira.jpg"</field>
+                          </shadow>
+                        </value>
+                        <value name="val2">
+                          <shadow type="textinline" id="ufv|]Geyxje{o{ZAR519">
+                            <field name="text">"/home/pi/Desktop/nairo.jpg"</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="webwhileout" id="ZN8a`NnsjD;Am.C8y=jT">
+                    <value name="cond">
+                      <shadow type="textinline" id="R;Nb@X1nKh_b]O~vIG51">
+                        <field name="text">True</field>
+                      </shadow>
+                    </value>
+                    <statement name="DO">
+                      <block type="variables_set" id="mdPj=(fns#cv}R$nU+S_">
+                        <field name="VAR" id="_nTexREPl:7xVBk5:dM`" variabletype="">nombre</field>
+                        <field name="NAME">=</field>
+                        <value name="varset">
+                          <shadow type="textinline" id="Q[$3Ubuek~Um)CFFbVkQ">
+                            <field name="text">0</field>
+                          </shadow>
+                          <block type="webrtobj" id="ymd6:^9P6)4:!tY3s[Z$">
+                            <value name="def">
+                              <shadow type="textinline" id="[EGj%wwa/5vm9Y=Q4B,u">
+                                <field name="text">Objeto</field>
+                              </shadow>
+                              <block type="variables_get" id="sP^Dp?14Qud,W;1.Z;4S">
+                                <field name="VAR" id="L^FZ=L|l8|QRqu7CD5g:" variabletype="">maquina</field>
+                              </block>
+                            </value>
+                            <value name="params">
+                              <shadow type="textinline" id="jD5PM@RcqGa|AFr?iYu@">
+                                <field name="text">aQuienVeo()</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="webifinline" id="Z7I6OVO.A{sS2^9T,Y?T">
+                            <value name="iftext">
+                              <shadow type="textinline" id="ok!UO.paq_O5w*`EWDBJ">
+                                <field name="text">True</field>
+                              </shadow>
+                              <block type="webinternal" id="WAs`npsa0sbsRvmOgjW.">
+                                <field name="choose">==</field>
+                                <value name="first">
+                                  <shadow type="textinline" id="iei=F`Ma{Ld1,LdY+S2_">
+                                    <field name="text">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="PAwJ4IQ74Coh}FdSxa)s">
+                                    <field name="VAR" id="_nTexREPl:7xVBk5:dM`" variabletype="">nombre</field>
+                                  </block>
+                                </value>
+                                <value name="last">
+                                  <shadow type="textinline" id="y!d?6vq8OoSBx{$`X)TA">
+                                    <field name="text">0</field>
+                                  </shadow>
+                                  <block type="webbltext" id="hK_[XluQI}p(^t?s1tYk">
+                                    <value name="NAME">
+                                      <shadow type="stringinline" id="^vaImFk%I*fYO9RyTCQj">
+                                        <field name="text">Persona1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="ifstate">
+                              <block type="ledaction" id="i^ln7o]2OibuyPM:aH|S">
+                                <field name="led" id="A5l0{5L#k$vEb.oilzU:" variabletype="">led</field>
+                                <field name="action">on</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="webelifinline" id="8;{)bU?J_PUk+2XXB,__">
+                                <value name="iftext">
+                                  <shadow type="textinline" id="0s-b#H9Lb?ms$DiC5dc)">
+                                    <field name="text">True</field>
+                                  </shadow>
+                                  <block type="webinternal" id="30Jb[h#:C,{G(x=BLo)-">
+                                    <field name="choose">==</field>
+                                    <value name="first">
+                                      <shadow type="textinline" id="iei=F`Ma{Ld1,LdY+S2_">
+                                        <field name="text">0</field>
+                                      </shadow>
+                                      <block type="variables_get" id="-_])]!4_l21;ra{R4OyJ">
+                                        <field name="VAR" id="_nTexREPl:7xVBk5:dM`" variabletype="">nombre</field>
+                                      </block>
+                                    </value>
+                                    <value name="last">
+                                      <shadow type="textinline" id="y!d?6vq8OoSBx{$`X)TA">
+                                        <field name="text">0</field>
+                                      </shadow>
+                                      <block type="webbltext" id="Os?s^$h53GiwGAd$)-V7">
+                                        <value name="NAME">
+                                          <shadow type="stringinline" id="B:ARz15u.~vDnn8tp]41">
+                                            <field name="text">Persona2</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="ifstate">
+                                  <block type="ledaction" id="]e1AHQVLAPjn|5H4q=B4">
+                                    <field name="led" id="A5l0{5L#k$vEb.oilzU:" variabletype="">led</field>
+                                    <field name="action">on</field>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="webelifinline" id="P3hD@`uM}dt-=ekDXa;L">
+                                    <value name="iftext">
+                                      <shadow type="textinline" id=",|N.r=JM2C7moi(7eH8P">
+                                        <field name="text">True</field>
+                                      </shadow>
+                                      <block type="webinternal" id="+q)Mkzqa?CWkX4v!NlB.">
+                                        <field name="choose">==</field>
+                                        <value name="first">
+                                          <shadow type="textinline" id="iei=F`Ma{Ld1,LdY+S2_">
+                                            <field name="text">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="pp9s1tf0V6/0gyh{uxlG">
+                                            <field name="VAR" id="_nTexREPl:7xVBk5:dM`" variabletype="">nombre</field>
+                                          </block>
+                                        </value>
+                                        <value name="last">
+                                          <shadow type="textinline" id="y!d?6vq8OoSBx{$`X)TA">
+                                            <field name="text">0</field>
+                                          </shadow>
+                                          <block type="webbltext" id="=9dxR_kA.hb|Dhi/b(OT">
+                                            <value name="NAME">
+                                              <shadow type="stringinline" id="f0cdec)Q(~~N6k^2L`2D">
+                                                <field name="text">Desconocido</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="ifstate">
+                                      <block type="ledaction" id="j,-eDfer~l28,]lJ;wg/">
+                                        <field name="led" id="A5l0{5L#k$vEb.oilzU:" variabletype="">led</field>
+                                        <field name="action">on</field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="webelse" id="Yx.hN93sE/wg[.3@rSlt">
+                                        <statement name="DO">
+                                          <block type="ledaction" id="|6)f}tz`v0?lqad%Du]A">
+                                            <field name="led" id="A5l0{5L#k$vEb.oilzU:" variabletype="">led</field>
+                                            <field name="action">off</field>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
   <block type="webbltext" id="}s`x@gSTri}$=s0|T5(/" x="310" y="2295">
     <value name="NAME">
       <shadow type="stringinline" id="jktoz]*p}W%wUEd73|A]">

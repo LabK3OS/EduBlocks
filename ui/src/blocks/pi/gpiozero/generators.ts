@@ -225,7 +225,7 @@ export default function define(Python: Blockly.BlockGenerators) {
   Python['buzzeraction'] = function (block) {
     const variable_name = Blockly.Python.variableDB_.getName(block.getFieldValue('buzzer'), Blockly.Variables.NAME_TYPE);
     const dropdown_action = block.getFieldValue('action');
-    var text_bracket = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    
     // TODO: Assemble Python into code variable.
     const code = variable_name + '.' + dropdown_action + '()\n';
     return code;

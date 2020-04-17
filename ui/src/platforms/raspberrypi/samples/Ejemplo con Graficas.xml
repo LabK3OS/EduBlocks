@@ -7,7 +7,7 @@
     <next>
       <block type="chart_type" id="y@F%nK6?fTkJV]@~2]T)">
         <field name="name" id="@AcBIc*uRTPwVqqg~@m=" variabletype="">bar_chart</field>
-        <field name="chartTypes">Radar</field>
+        <field name="chartTypes">Bar</field>
         <value name="text">
           <shadow type="textinline" id="u.!o3~0`2$4O6Y5Tr5[s">
             <field name="text"></field>

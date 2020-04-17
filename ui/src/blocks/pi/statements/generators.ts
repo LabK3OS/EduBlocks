@@ -77,7 +77,7 @@ export default function define(Python: Blockly.BlockGenerators) {
     var text1_print = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
     var text2_print = Blockly.Python.valueToCode(block, 'text1', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
-    const code = text1_print + ' = ' + text2_print + '\n';
+    const code = text1_print + ' = ' + text2_print;
     return [code, Blockly.Python.ORDER_ATOMIC];
   };
 
