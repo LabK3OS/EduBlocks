@@ -13,7 +13,24 @@ export default function define(Python: Blockly.BlockGenerators) {
     var code = 'background(' +value_text+ ')\n';
     return code;
   };
+  Python['p_mouse_y'] = function (block) {
+    var code = 'mouse_y';
+    return [code, Blockly.Python.ORDER_ATOMIC];
+  };
+  Python['p_mouse_x'] = function (block) {
+    var code = 'mouse_x';
+    return [code, Blockly.Python.ORDER_ATOMIC];
+  };
 
+  
+  Python['p_position'] = function (block) {
+    var value_text0 = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    var value_text1 = Blockly.Python.valueToCode(block, 'text1', Blockly.Python.ORDER_ATOMIC);
+    // TODO: Assemble Python into code variable.
+    var code = '(' + value_text0 + ','+value_text1 + ')';
+    // TODO: Change ORDER_NONE to the correct strength.
+    return [code, Blockly.Python.ORDER_ATOMIC];
+  };
   Python['p_blue'] = function (block) {
     var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
@@ -137,7 +154,7 @@ export default function define(Python: Blockly.BlockGenerators) {
 
   
   Python['p_nostroke'] = function(block) {
-    var value_text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    
     // TODO: Assemble Python into code variable.
     var code = 'no_stroke()\n';
     return code;

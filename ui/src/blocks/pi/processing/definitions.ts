@@ -12,9 +12,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -31,9 +31,54 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
+      this.setTooltip("");
+      this.setHelpUrl("");
+    }
+  };
+  Blocks['p_mouse_y'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("mouse_y");
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setColour(pro_col);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+      this.setTooltip("");
+      this.setHelpUrl("");
+    }
+  };
+  Blocks['p_mouse_x'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("mouse_x");
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setColour(pro_col);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+      this.setTooltip("");
+      this.setHelpUrl("");
+    }
+  };
+
+  Blocks['p_position'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("position(x=");
+      this.appendValueInput("text")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(",y=");
+      this.appendValueInput("text1")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(")");
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setColour(pro_col);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -101,9 +146,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -120,9 +165,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -139,9 +184,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -154,9 +199,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -173,9 +218,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -192,9 +237,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -211,9 +256,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -260,9 +305,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -279,9 +324,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -298,9 +343,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -318,9 +363,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -337,9 +382,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -356,9 +401,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -371,9 +416,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -390,9 +435,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -409,9 +454,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -428,9 +473,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -447,9 +492,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -466,9 +511,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -481,9 +526,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -500,9 +545,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -519,9 +564,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -538,9 +583,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -557,16 +602,16 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
   };
 
 
-  
+
   Blocks['p_text'] = {
     init: function () {
       this.appendDummyInput()
@@ -578,9 +623,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -597,15 +642,15 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
   };
 
-  
+
 
   Blocks['p_translate'] = {
     init: function () {
@@ -618,9 +663,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -637,9 +682,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -656,9 +701,9 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
@@ -674,15 +719,15 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      
+
       this.setColour(pro_col);
-      
+
       this.setTooltip("");
       this.setHelpUrl("");
     }
   };
 
-  
-  
+
+
 }
 

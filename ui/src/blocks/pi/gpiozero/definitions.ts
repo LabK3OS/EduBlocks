@@ -14,19 +14,33 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['importtime'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField('import datetime');
+        .appendField('import max7219');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#ff0066");
-      this.setTooltip('Importar librería para obtener la hora del día');
-      this.setHelpUrl('http://gpiozero.readthedocs.io');
+      this.setTooltip('Importar librería para matriz de leds');
     },
   };
-
+  Blocks['createGenericInput'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable('entrada'), 'entrada')
+        .appendField(' = Input(')
+      this.appendValueInput("text")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(')');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour("#16AEE5");
+      this.setTooltip('Crear objeto para usar entrada');
+      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#button');
+    },
+  };
   Blocks['buttonset'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable('button'), 'button')
+        .appendField(new Blockly.FieldVariable('boton'), 'boton')
         .appendField(' = Button(')
       this.appendValueInput("text")
         .setCheck(null);
@@ -35,7 +49,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#16AEE5");
-      this.setTooltip('Set a variable for a button');
+      this.setTooltip('Crear objeto para usar un botón');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#button');
     },
   };
@@ -54,7 +68,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#16AEE5");
-      this.setTooltip("Setup a line sensor");
+      this.setTooltip("crear objeto para sensor de TRCT5000");
       this.setHelpUrl("https://gpiozero.readthedocs.io/en/stable/api_input.html#line-sensor-trct5000");
     }
   };
@@ -71,7 +85,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#16AEE5");
-      this.setTooltip('Set a variable for a MotionSensor');
+      this.setTooltip('Crear objeto para sensor de movimiento D-SUN PIR');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#motion-sensor-d-sun-pir');
     },
   };
@@ -88,7 +102,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#16AEE5");
-      this.setTooltip('Set a variable for a Light Sensor');
+      this.setTooltip('Crear objeto para sensor de luz');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#light-sensor-ldr');
     },
   };
@@ -96,17 +110,37 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['distanceset'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable('distance'), 'distance')
-        .appendField(' = DistanceSensor(')
+        .appendField(new Blockly.FieldVariable('distancia'), 'distancia')
+        .appendField(' = DistanceSensor(echo=')
       this.appendValueInput("text")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(', trigger= ');
+      this.appendValueInput("text1")
         .setCheck(null);
       this.appendDummyInput()
         .appendField(')');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#16AEE5");
-      this.setTooltip('Set a variable for a Distance Sensor');
+      this.setTooltip('Crear objeto para sensor de distancia');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#distance-sensor-hc-sr04');
+    },
+  };
+  Blocks['createGenericOutput'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable('salida'), 'salida')
+        .appendField(' = Output(')
+      this.appendValueInput("text")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(')');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour("#E51616");
+      this.setTooltip('Crear objeto para salida');
+      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#led');
     },
   };
 
@@ -122,7 +156,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set a variable for an LED');
+      this.setTooltip('Crear objeto para LED');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#led');
     },
   };
@@ -139,7 +173,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set a variable for an PWMLED');
+      this.setTooltip('Crear objeto para LED controlado por PWM');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#pwmled');
     },
   };
@@ -173,7 +207,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set a variable for an Buzzer');
+      this.setTooltip('Crear objeto para controlar un Buzzer');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#buzzer');
     },
   };
@@ -186,11 +220,15 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
+        .appendField(', ');
+      this.appendValueInput("text1")
+        .setCheck(null);
+      this.appendDummyInput()
         .appendField(')');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set a variable for a Motor');
+      this.setTooltip('Crear objeto para controlar un Motor');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#motor');
     },
   };
@@ -207,7 +245,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set a variable for a Servo');
+      this.setTooltip('Crear objeto para controlar Servomotor');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#servo');
     },
   };
@@ -375,22 +413,31 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#light-sensor-ldr');
     },
   };
-
+  Blocks['writeGenericOutput'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable('salida'), 'salida')
+        .appendField('.')
+        .appendField(new Blockly.FieldDropdown([['on', 'on'], ['off', 'off'], ['toggle', 'toggle']]), 'action')
+        .appendField('()')
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour("#E51616");
+      this.setTooltip('Modificar el estado del pin. "on" para 1, "off" para 0, "toggle" para intercambiar el estado actual');
+      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#led');
+    },
+  };
   Blocks['ledaction'] = {
     init: function () {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable('led'), 'led')
         .appendField('.')
-        .appendField(new Blockly.FieldDropdown([['on', 'on'], ['off', 'off'], ['blink', 'blink'], ['toggle', 'toggle']]), 'action')
-        .appendField('(')
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(')');
+        .appendField(new Blockly.FieldDropdown([['on', 'on'], ['off', 'off'], ['toggle', 'toggle']]), 'action')
+        .appendField('()')
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set a variable for an LED');
+      this.setTooltip('Modificar el estado del led. on para prender, off para apagar, toggle para intercambiar el estado actual del led');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#led');
     },
   };
@@ -438,16 +485,12 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable('buzzer'), 'buzzer')
         .appendField('.')
-        .appendField(new Blockly.FieldDropdown([['on', 'on'], ['off', 'off'], ['beep', 'beep'], ['toggle', 'toggle']]), 'action')
-        .appendField('(')
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(')');
+        .appendField(new Blockly.FieldDropdown([['on', 'on'], ['off', 'off'], ['toggle', 'toggle']]), 'action')
+        .appendField('()')
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set a variable for a Buzzer');
+      this.setTooltip('Modificar el estado del Buzzer. "on" para prender, "off" para apagar, "toggle" para intercambiar el estado actual del Buzzer');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#buzzer');
     },
   };
@@ -458,7 +501,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
         .appendField(new Blockly.FieldVariable('motor'), 'motor')
         .appendField('.')
         .appendField(new Blockly.FieldDropdown([['forward', 'forward'], ['backward', 'backward'], ['stop', 'stop']]), 'action')
-        .appendField('(')
+        .appendField('(speed=')
       this.appendValueInput("text")
         .setCheck(null);
       this.appendDummyInput()
@@ -466,7 +509,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set a variable for a Motor');
+      this.setTooltip('Modificar el estado del motor, "forward" para mover en un sentido, "backward" para mover en sentido contrario, "speed" para ajustar velocidad del motor (valor entre 0 y 1) y "stop" para detener el motor ');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#motor');
     },
   };
@@ -566,23 +609,30 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     },
   };
 
+  Blocks['readGenericInput'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable('entrada'), 'entrada')
+        .appendField('.value()')
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+      this.setColour("#16AEE5");
+      this.setTooltip('Leer estado de la entrada. 1 si es 3.3v, 0 si es 0v');
+      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#button');
+    },
+  };
 
   Blocks['buttonvar'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable('button'), 'button')
-        .appendField('.')
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(' = ')
-      this.appendValueInput("text1")
-        .setCheck(null);
-
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
+        .appendField(new Blockly.FieldVariable('boton'), 'boton')
+        .appendField('.value()')
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#16AEE5");
-      this.setTooltip('Set an action variable for a button');
+      this.setTooltip('Leer estado del boton. 1 si esta presionado, 0 en caso contrario');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#button');
     },
   };
@@ -591,17 +641,12 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     init: function () {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable('sensor'), 'sensor')
-        .appendField('.')
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(' = ')
-      this.appendValueInput("text1")
-        .setCheck(null);
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
+        .appendField('.value()')
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#16AEE5");
-      this.setTooltip('Set an action variable for a Sensor');
+      this.setTooltip('Lectura del sensor. Retorna un numero entre 0 y 1. Un valor mas cercano a 0 significa un color mas oscuro, y un valor mas cercano a 1 significa color mas claro');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#line-sensor-trct5000');
     },
   };
@@ -610,18 +655,13 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     init: function () {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable('pir'), 'pir')
-        .appendField('.')
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(' = ')
-      this.appendValueInput("text1")
-        .setCheck(null);
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
+        .appendField('.motion_detected()')
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#16AEE5");
-      this.setTooltip('Set an action variable for a motion sensor');
-      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#line-sensor-trct5000');
+      this.setTooltip('Lectura de sensor. Retorna 1 si se detecto un movimiento, 0 en caso contrario');
+      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html');
     },
   };
 
@@ -631,18 +671,13 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     init: function () {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable('ldr'), 'ldr')
-        .appendField('.')
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(' = ')
-      this.appendValueInput("text1")
-        .setCheck(null);
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
+        .appendField('.value()')
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#16AEE5");
-      this.setTooltip('Set an action variable for a light sensor');
-      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#line-sensor-trct5000');
+      this.setTooltip('Lectura de sensor. Retorna un valor entre 0 (oscuridad) y 1 (luz).');
+      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html');
     },
   };
 
@@ -650,19 +685,14 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['distancevar'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable('distance'), 'disance')
-        .appendField('.')
-      this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(' = ')
-      this.appendValueInput("text1")
-        .setCheck(null);
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
+        .appendField(new Blockly.FieldVariable('distancia'), 'distancia')
+        .appendField('.distance()')
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
       this.setColour("#16AEE5");
-      this.setTooltip('Set an action variable for a Distance sensor');
-      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html#line-sensor-trct5000');
+      this.setTooltip('Lectura de sensor. Retorna la distancia en metros a la que se encuentra el objeto mas cercano');
+      this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_input.html');
     },
   };
 
@@ -689,17 +719,13 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     init: function () {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable('pwm'), 'pwm')
-        .appendField('.')
+        .appendField('.value =')
       this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(' = ')
-      this.appendValueInput("text1")
         .setCheck(null);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set an action variable for an PWMLED');
+      this.setTooltip('Ajustar brillo de LED, 1 para maximo, 0 para minimo');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#pwmled');
     },
   };
@@ -765,17 +791,13 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     init: function () {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable('servo'), 'servo')
-        .appendField('.')
+        .appendField('.value =')
       this.appendValueInput("text")
-        .setCheck(null);
-      this.appendDummyInput()
-        .appendField(' = ')
-      this.appendValueInput("text1")
         .setCheck(null);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#E51616");
-      this.setTooltip('Set an action variable for a Servo');
+      this.setTooltip('Ajustar posicion de Servomotor, con un valor entre -1 y 1.');
       this.setHelpUrl('https://gpiozero.readthedocs.io/en/stable/api_output.html#servo');
     },
   };
@@ -1058,7 +1080,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
   Blocks['cpuset'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("cpu"), "cpu")
+        .appendField(new Blockly.FieldVariable("temperatura"), "temperatura")
         .appendField(" = CPUTemperature(min_temp(")
       this.appendValueInput("text")
         .setCheck(null);
@@ -1071,15 +1093,26 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#16E57E");
-      this.setTooltip("Setup CPU Temp");
+      this.setTooltip("Crear objeto para leer la temperatura del procesador");
       this.setHelpUrl("https://gpiozero.readthedocs.io/en/stable/api_other.html#cputemperature");
     }
   };
-
+  Blocks['cpuread'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable('temperatura'), 'temperatura')
+        .appendField('.temperature()')
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+      this.setColour("#16E57E");
+      this.setTooltip('Este bloque retorna la temperatura del procesador en grados celsius.');
+    },
+  };
   Blocks['adc'] = {
     init: function () {
       this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("var"), "var")
+        .appendField(new Blockly.FieldVariable("adc"), "adc")
         .appendField(" = ")
         .appendField(new Blockly.FieldDropdown([["MCP3001", "MCP3001"], ["MCP3002", "MCP3002"], ["MCP3004", "MCP3004"], ["MCP3008", "MCP3008"], ["MCP3201", "MCP3201"], ["MCP3202", "MCP3202"], ["MCP3204", "MCP3204"], ["MCP3208", "MCP3208"], ["MCP3302", "MCP3302"], ["MCP3302", "MCP3302"], ["MCP3304", "MCP3304"]]), "NAME")
         .appendField("(")
@@ -1090,10 +1123,48 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#16E57E");
-      this.setTooltip("Setup Analog to Digital Converters");
+      this.setTooltip("Crear objeto para usar ADC");
       this.setHelpUrl("https://gpiozero.readthedocs.io/en/stable/api_spi.html#analog-to-digital-converters-adc");
     }
   };
-
-
+  Blocks['adcread'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("adc"), "adc")
+        .appendField(".value()")
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+      this.setColour("#16E57E");
+      this.setTooltip("Crear objeto para usar ADC");
+      this.setHelpUrl("https://gpiozero.readthedocs.io/en/stable/api_spi.html#analog-to-digital-converters-adc");
+    }
+  };
+    Blocks['createMatrix'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("matriz"), "matriz")
+        .appendField(" = Disp.matrix()")
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour("#16E57E");
+      this.setTooltip("Crear objeto para controlar matriz de led");
+    }
+  };
+  Blocks['writeMatrix'] = {
+    init: function () {
+      this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("matriz"), "matriz")
+      .appendField(".show_message(")
+      this.appendValueInput("text")
+        .setCheck(null);
+      this.appendDummyInput()
+        .appendField(")");
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour("#16E57E");
+      this.setTooltip("Mostrar texto en la matriz de led");
+      
+    }
+  };
 }

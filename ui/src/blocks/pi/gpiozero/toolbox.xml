@@ -1,439 +1,239 @@
 <category name="gpiozero" colour="#E4E436" iconclass="blocklyTreeIconCustom gpio">
   <category name="Entradas" colour="#16AEE5">
-  <label text="Bloques de entradas genericas" web-class="myLabelStyle"></label>
+    <label text="Bloques de entradas genericas" web-class="myLabelStyle"></label>
     <block type="createGenericInput">
       <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-      </value>    
+        <shadow type="textinline">
+          <field name="text">20</field>
+        </shadow>
+      </value>
     </block>
     <block type="readGenericInput">
       <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-      </value>    
+        <shadow type="textinline">
+          <field name="text"></field>
+        </shadow>
+      </value>
     </block>
     <category name="Boton" colour="#16AEE5">
+      <label text="Bloques para usar botones" web-class="myLabelStyle"></label>
       <block type="buttonset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">20</field>
           </shadow>
         </value>
       </block>
-      <block type="buttonaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="buttonvar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+
+      <block type="buttonvar"></block>
     </category>
-    <category name="Sensor infrarrojo (TCRT5000)" colour="#16AEE5">
+    <category name="TCRT5000" colour="#16AEE5">
+      <label text="Bloques para usar sensor infrarrojo TCRT5000" web-class="myLabelStyle"></label>
       <block type="lineset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">20</field>
           </shadow>
         </value>
       </block>
-      <block type="lineaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="linevar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+
+      <block type="linevar"></block>
     </category>
-    <category name="Sensor de movimiento (D-SUN PIR)" colour="#16AEE5">
+    <category name="D-SUN PIR" colour="#16AEE5">
+      <label text="Bloques para usar sensor de movimiento D-SUN PIR" web-class="myLabelStyle"></label>
+
       <block type="motionset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">20</field>
           </shadow>
         </value>
       </block>
-      <block type="motionaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="motionvar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+
+      <block type="motionvar"></block>
+
     </category>
-    <category name="Sensor de luz (LDR)" colour="#16AEE5">
+    <category name="LDR" colour="#16AEE5">
+      <label text="Bloques para usar sensor de luz por resistencia fotosensible LDR" web-class="myLabelStyle"></label>
       <block type="lightset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">20</field>
           </shadow>
         </value>
       </block>
-      <block type="lightaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="lightvar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+
+      <block type="lightvar"></block>
     </category>
-    <category name="Sensor de distancia (HC-SR04)" colour="#16AEE5">
+
+    <category name="HC-SR04" colour="#16AEE5">
+      <label text="Bloques para usar sensor de distancia por ultrasonido HC-SR04" web-class="myLabelStyle"></label>
       <block type="distanceset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="distanceaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="distancevar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">19</field>
           </shadow>
         </value>
         <value name="text1">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">20</field>
           </shadow>
         </value>
       </block>
+
+      <block type="distancevar"></block>
+
+
     </category>
   </category>
   <category name="Salidas" colour="#E51616">
-  <label text="Bloques de salidas genericas" web-class="myLabelStyle"></label>
+    <label text="Bloques de salidas genericas" web-class="myLabelStyle"></label>
     <block type="createGenericOutput">
       <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-      </value>    
+        <shadow type="textinline">
+          <field name="text">19</field>
+        </shadow>
+      </value>
     </block>
-    <block type="readGenericOutput">
-      <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-      </value>    
-    </block>
+    <block type="writeGenericOutput"></block>
+
+
     <category name="LED" colour="#E51616">
+      <label text="Bloques para control de LED" web-class="myLabelStyle"></label>
       <block type="ledset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">19</field>
           </shadow>
         </value>
       </block>
-      <block type="ledaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="ledvar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+      <block type="ledaction"></block>
     </category>
+
     <category name="LED PWM" colour="#E51616">
+      <label text="Bloques para controlar brillo de LED por PWM" web-class="myLabelStyle"></label>
       <block type="pledset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="pledaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">19</field>
           </shadow>
         </value>
       </block>
       <block type="pledvar">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">0.5</field>
           </shadow>
         </value>
       </block>
     </category>
-    <category name="LED RGB" colour="#E51616">
-      <block type="rgbledset">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="rgbledaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="rgbledvar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-    </category>
+    
     <category name="Buzzer" colour="#E51616">
+      <label text="Bloques para control de Buzzer" web-class="myLabelStyle"></label>
       <block type="buzzerset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">19</field>
           </shadow>
         </value>
       </block>
-      <block type="buzzeraction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="buzzervar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+      <block type="buzzeraction"></block>
     </category>
+
     <category name="Motor" colour="#E51616">
+      <label text="Bloques para controlar Motor con puente H" web-class="myLabelStyle"></label>
+      
       <block type="motorset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">17</field>
+          </shadow>
+        </value>
+        <value name="text1">
+          <shadow type="textinline">
+            <field name="text">18</field>
           </shadow>
         </value>
       </block>
+
+
       <block type="motoraction">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">0.5</field>
           </shadow>
         </value>
       </block>
-      <block type="motorvar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+    
     </category>
     <category name="Servomotor" colour="#E51616">
+      <label text="Bloques para controlar Servomotor" web-class="myLabelStyle"></label>
+      
       <block type="servoset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">19</field>
           </shadow>
         </value>
       </block>
-      <block type="servoaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+
       <block type="servovar">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">-1</field>
           </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
+        </value>        
       </block>
     </category>
-    <category name="Servomotor angular" colour="#E51616">
-      <block type="angset">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="angaction">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-      <block type="angvar">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-    </category>
-  </category>  
+
+  </category>
   <category name="Extras" colour="#16E57E">
-    <category name="Hora del día" colour="#16E57E">
-      <block type="timeset">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-    </category>
-    <category name="Ping Server" colour="#16E57E">
-      <block type="pingset">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
-    </category>
-    <category name="Temperatura" colour="#16E57E">
+
+
+    <category name="Temperatura CPU" colour="#16E57E">
+      <label text="Bloques para leer la temperatura del procesador de RaspberryPi" web-class="myLabelStyle"></label>
+      
       <block type="cpuset">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">50</field>
           </shadow>
         </value>
         <value name="text1">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">95</field>
           </shadow>
         </value>
       </block>
+
+      <block type="cpuread">
+        <value name="text">
+          <shadow type="textinline">
+            <field name="text">-1</field>
+          </shadow>
+        </value>        
+      </block>
+
     </category>
     <category name="ADC SPI" colour="#16E57E">
+      <label text="Bloques para utilizar conversor analogo digital" web-class="myLabelStyle"></label>
       <block type="adc">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">channel=0</field>
           </shadow>
         </value>
       </block>
-      
+      <block type="adcread"></block>
+
     </category>
-    <category name="Matriz de Leds SPI" colour="#16E57E">
-      <block type="createMatrix">
-        <value name="text">
-          <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-      </block>
+    <category name="Matriz de led SPI" colour="#16E57E">
+      <label text="Bloques para controlar matriz de led max7219" web-class="myLabelStyle"></label>
+      <block type="createMatrix"></block>
       <block type="writeMatrix">
         <value name="text">
           <shadow type="textinline">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <value name="text1">
-          <shadow type="textinline">
-            <field name="text"></field>
+            <field name="text">"Hola"</field>
           </shadow>
         </value>
       </block>

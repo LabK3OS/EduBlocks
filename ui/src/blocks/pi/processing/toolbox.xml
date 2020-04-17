@@ -2,6 +2,21 @@
 
 
   <label text="Bloques de Processing" web-class="myLabelStyle"></label>
+  <block type="p_mouse_x"></block>
+  <block type="p_mouse_y"></block>
+
+  <block type="p_position">
+    <value name="text">
+      <shadow type="textinline">
+        <field name="text">200</field>
+      </shadow>
+    </value>
+    <value name="text1">
+      <shadow type="textinline">
+        <field name="text">200</field>
+      </shadow>
+    </value>
+  </block>
 
   <block type="p_arc">
     <value name="text">
